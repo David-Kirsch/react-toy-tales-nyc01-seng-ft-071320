@@ -10,8 +10,19 @@ import data from './data'
 
 class App extends React.Component{
 
+  addToyHandler = (toyObj,e ) => {
+    let newToysArray = [toyObj, ...this.state.toys]
+    this.setState({
+      toys: newToysArray
+    })
+
+  }
+
+
+
   state = {
-    display: false
+    display: false,
+    toys: data
   }
 
   handleClick = () => {
@@ -21,20 +32,23 @@ class App extends React.Component{
     })
   }
 
+
+
+
   render(){
     return (
       <>
         <Header/>
         { this.state.display
             ?
-          <ToyForm/>
+          <ToyForm addToyHandler={this.addToyHandler}/>
             :
           null
         }
         <div className="buttonContainer">
           <button onClick={this.handleClick}> Add a Toy </button>
         </div>
-        <ToyContainer/>
+        <ToyContainer data={this.state.toys}/>
       </>
     );
   }

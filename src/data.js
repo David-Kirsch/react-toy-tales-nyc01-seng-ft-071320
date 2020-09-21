@@ -50,7 +50,7 @@ const toyData = [
     {
       "id": 9,
       "name": "Pillsbury Doughboy",
-      "image": "https://i.ebayimg.com/images/g/Q-cAAOSwvdxdWyOe/s-l640.jpg",
+      "image": "https://i.pinimg.com/originals/28/99/c6/2899c697ac8efa6294e9f325e901f69f.png",
       "likes": 10
     }
   ]
